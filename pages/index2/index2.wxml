@@ -1,0 +1,11 @@
+<view class="container">
+  <p>index2</p>
+  <p>{{msg}}</p>
+  <li wx:for="{{list}}" wx:for-index="idx" wx:for-item="item" wx:key="unique">
+	  {{idx}} - {{item.dictValue}}
+  </li>
+  <view wx:if="{{list.length > 0}}">大于0</view>
+  <view wx:elif="{{list.length == 0}}">等于0</view>
+  <view wx:else>啥都不是</view>
+  <button bindtap="clickBtn">点击</button>
+</view>

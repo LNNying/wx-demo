@@ -1,6 +1,13 @@
 //app.js
 App({
+onShow: function() {
+	console.log('小程序显示的时候')
+},
+onHide() {
+	console.log('小程序处于后台，  如游戏退出')
+},
   onLaunch: function () {
+	  console.log('小程序初始化')
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -33,7 +40,10 @@ App({
       }
     })
   },
+  // App（{}） 相当于一个全局配置方法或变量
+  // 定义全局变量 通过getApp 获取信息
   globalData: {
-    userInfo: null
+    userInfo: null,
+	msg: '全局配置'
   }
 })
